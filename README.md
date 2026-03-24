@@ -1,10 +1,14 @@
-A HTTPS client implementation for 
- * ``httplib`` (Python 2), ``http.client`` (Python 3) and 
- * ``urllib2`` (Python 2) and ``urllib`` (Python 3)
+A HTTPS client implementation for
+ * ``http.client`` (Python 3) and
+ * ``urllib`` (Python 3)
 
-... based on PyOpenSSL.  PyOpenSSL provides a more fully featured SSL implementation 
-over the default provided with Python and importantly enables full verification 
+... based on PyOpenSSL.  PyOpenSSL provides a more fully featured SSL implementation
+over the default provided with Python and importantly enables full verification
 of the SSL peer using ``pyasn1``.
+
+**Note:** As of this version, Python 2 and Python < 3.8 are no longer supported.
+``PyOpenSSL >= 26.0.0`` and ``pyasn1 >= 0.6.3`` are now required to address
+CVE-2026-27459 and CVE-2026-30922 respectively.
 
 Releases
 ========
@@ -92,9 +96,7 @@ Initial release
 
 Prerequisites
 =============
-This has been developed and tested for Python 2.7 with pyOpenSSL 0.13 
-and 0.14.  Version 0.4.0 tested with ``pyOpenSSL`` 0.15.1 and Python 2.7 and 
-3.4. 
+Requires Python 3.8 or later, ``PyOpenSSL >= 26.0.0`` and ``pyasn1 >= 0.6.3``.
 ``pyasn1`` is required for correct SSL verification with ``subjectAltNames``.
 
 Installation
